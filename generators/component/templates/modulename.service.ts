@@ -6,15 +6,15 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 /** Module Level Dependencies */
-import { Dashboard } from '../store/dashboard.model';
+import { <%- Title %> } from '../store/<%- Component %>.model';
 import { BaseService } from '../../../app/core/services/index';
 
 /** Context for service calls */
-const CONTEXT = 'dashboard';
+const CONTEXT = '<%- Component %>';
 
 /** Service Definition */
 @Injectable()
-export class DashboardService extends BaseService {
+export class <%- Title %>Service extends BaseService {
 
     constructor(public http: Http) {
         super(http,CONTEXT);

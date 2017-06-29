@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { Dashboard } from '../store/dashboard.model';
-import { DASHBOARD_ACTIONS } from '../store/dashboard.actions';
+import { <%- Title %> } from '../store/<%- Component %>.model';
+import { <%- CapsComponent %>_ACTIONS } from '../store/<%- Component %>.actions';
 @Component({
   moduleId: module.id,
-  selector: 'app-dashboard',
-  templateUrl: 'dashboard.component.html',
+  selector: 'app-<%- Component %>',
+  templateUrl: '<%- Component %>.component.html',
 })
-export class DashboardComponent implements OnInit {
-  dashboard: Dashboard[];
-  constructor(private store: Store<Dashboard>) { }
+export class <%- Title %>Component implements OnInit {
+  <%- Component %>: <%- Title %>[];
+  constructor(private store: Store <<%- Title %>>) { }
   ngOnInit() {
-    this.store.dispatch({ type: DASHBOARD_ACTIONS.GET_DASHBOARD_LIST });
-    this.store.dispatch({ type: DASHBOARD_ACTIONS.ADD_DASHBOARD });
+    this.store.dispatch({ type: <%- CapsComponent %>_ACTIONS.GET_<%- CapsComponent %>_LIST });
+    this.store.dispatch({ type: <%- CapsComponent %>_ACTIONS.ADD_<%- CapsComponent %> });
 
-    this.store.select('dashboard').subscribe((res: any) => {
+    this.store.select('<%- Component %>').subscribe((res: any) => {
 
-      this.dashboard = res;
+      this.<%- Component %> = res;
     });
 
   }

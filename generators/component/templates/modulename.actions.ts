@@ -17,7 +17,7 @@ interface I<%- Title %>Actions {
 /**
  * COUNTER Actions List
  */
-export const <%- Title %>Actions : I<%- Title %>Actions = {
+export const <%- CapsComponent %>_ACTIONS : I<%- Title %>Actions = {
     INIT: `${CONTEXT}_INIT`,
     INITIALIZED: `${CONTEXT}_INITIALIZED`,
     INIT_FAILED: `${CONTEXT}_INIT_FAILED`,

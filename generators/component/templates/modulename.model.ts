@@ -1,5 +1,5 @@
-export interface Dashboard {
+export interface <%- Title %> {
   name:string;
 };
 
-export const initialCounter: Array<Dashboard> = []
+export const initialCounter: Array<<%- Title %>> = []

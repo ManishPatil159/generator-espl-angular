@@ -3,22 +3,22 @@ import { HttpModule } from '@angular/http';
 import { EffectsModule } from '@ngrx/effects';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { DashboardRouting } from './dashboard.routing';
+import { <%- Title %>Routing } from './<%- Component %>.routing';
 import { SharedModule } from '../../app/shared/shared.module';
-import { DashboardComponent } from './components/dashboard.component';
-import { DashboardEffects } from './store/dashboard.effects';
-import { DashboardService } from './services/dashboard.service';
+import { <%- Title %>Component } from './components/<%- Component %>.component';
+import { <%- Title %>Effects } from './store/<%- Component %>.effects';
+import { <%- Title %>Service } from './services/<%- Component %>.service';
 
 @NgModule({
   imports: [
     SharedModule,
     ReactiveFormsModule,
-    DashboardRouting,
-    EffectsModule.run(DashboardEffects)
+    <%- Title %>Routing,
+    EffectsModule.run(<%- Title %>Effects)
   ],
   declarations: [
-    DashboardComponent
+    <%- Title %>Component
   ],
-  providers:[DashboardService]
+  providers:[<%- Title %>Service]
 })
-export default class DashboardModule { }
+export default class <%- Title %>Module { }

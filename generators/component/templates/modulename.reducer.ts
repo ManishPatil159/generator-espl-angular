@@ -3,17 +3,17 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/let';
 import { Observable } from 'rxjs/Observable';
 import { ActionReducer, Action } from '@ngrx/store';
-import { Dashboard, initialCounter } from './dashboard.model';
-import { DASHBOARD_ACTIONS } from './dashboard.actions';
+import { <%- Title %>, initialCounter } from './<%- Component %>.model';
+import { <%- CapsComponent %>_ACTIONS } from './<%- Component %>.actions';
 
 
-export function DashboardReducer(state: Dashboard[] = initialCounter, action: Action): Dashboard[] {
+export function <%- Title %>Reducer(state: <%- Title %>[] = initialCounter, action: Action): <%- Title %>[] {
   switch (action.type) {
-    case DASHBOARD_ACTIONS.GET_DASHBOARD_SUCCESS:
+    case <%- CapsComponent %>_ACTIONS.GET_<%- CapsComponent %>_SUCCESS:
         return action.payload;
-    case DASHBOARD_ACTIONS.ADD_DASHBOARD_SUCCESS:
+    case <%- CapsComponent %>_ACTIONS.ADD_<%- CapsComponent %>_SUCCESS:
         return action.payload;
-    case DASHBOARD_ACTIONS.ON_FAILED:
+    case <%- CapsComponent %>_ACTIONS.ON_FAILED:
         return state;
     default:
         return state;
