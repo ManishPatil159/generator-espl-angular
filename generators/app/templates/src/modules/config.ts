@@ -6,18 +6,10 @@ import { DashboardReducer } from './dashboard/store/dashboard.reducer';
 export const routing = [];
 //#===== yeoman routing hook (This line is required for our yeoman generator and should not be changed.) =====#
 
-
 routing.push({ path: 'ob', loadChildren: 'modules/occurenceBook/occurenceBook.module' });
 routing.push({ path: 'dashboard', loadChildren: 'modules/dashboard/dashboard.module' });
 routing.push({ path: '', redirectTo: 'core', pathMatch: 'full' });
 routing.push({ path: '**', redirectTo: '/not-found', pathMatch: 'full' });
-
-// export const routing = [
-//   { path: 'ob', loadChildren: 'modules/occurenceBook/occurenceBook.module' },
-//   { path: 'dashboard', loadChildren: 'modules/dashboard/dashboard.module' },
-//   { path: '', redirectTo: 'core', pathMatch: 'full' },
-//   { path: '**', redirectTo: '/not-found', pathMatch: 'full' }
-// ];
 
 export const ApiBase = "http://192.168.100.103:6070/api/";
 export const ApiBaseAuthUrl = "auth/token";

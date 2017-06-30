@@ -257,18 +257,26 @@ module.exports = class extends Generator {
     var data = {
       ENV_CONFIG: '<%= ENV_CONFIG %>'
     };
-    //data.ENV_CONFIG = data.ENV_CONFIG.replace("&lt;", "<").replace("&gt;", ">");
-    allFileNames.map(file =>
-      this.fs.copyTpl(this.templatePath(file), this.destinationPath('public/' + file), data)
-    );
-    //
-    // this.fs.copy(
-    //   this.templatePath('dummyfile.txt'),
-    //   this.destinationPath('dummyfile.txt')
+    // allFileNames.map(file =>
+    //   this.fs.copyTpl(this.templatePath(file), this.destinationPath('public/' + file), data)
     // );
+
+    // Copy all non-dotfiles
+    this.fs.copy(
+      this.templatePath('**/*'),
+      this.destinationRoot("public/"),
+      data
+    );
+
+    // Copy all dotfiles
+    this.fs.copy(
+      this.templatePath('.*'),
+      this.destinationRoot("public/")
+    );
+
   }
 
   install() {
-    this.installDependencies();
+    //this.installDependencies();
   }
 };
