@@ -254,12 +254,12 @@ module.exports = class extends Generator {
       "src/modules/occurenceBook/store/occurenceBook.reducer.ts"
     ];
 
+    var data = {
+      ENV_CONFIG: '<%= ENV_CONFIG %>'
+    };
+    //data.ENV_CONFIG = data.ENV_CONFIG.replace("&lt;", "<").replace("&gt;", ">");
     allFileNames.map(file =>
-      this.fs.copyTpl(this.templatePath(file), this.destinationPath('public/' + file), {
-        ENV_CONFIG: {
-          production: false
-        }
-      })
+      this.fs.copyTpl(this.templatePath(file), this.destinationPath('public/' + file), data)
     );
     //
     // this.fs.copy(

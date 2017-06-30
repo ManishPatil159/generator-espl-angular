@@ -53,7 +53,7 @@ export class Config {
 
   public static ENVIRONMENT(): EnvConfig {
     try {
-      return JSON.parse('<%= ENV_CONFIG %>');
+      return JSON.parse('<%- ENV_CONFIG %>');
     } catch (exp) {
       return {};
     }

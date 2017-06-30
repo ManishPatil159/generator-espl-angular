@@ -16,6 +16,12 @@ Then generate your new project:
 yo espl-angular
 ```
 
+Then generate a new module in your project:
+
+```bash
+yo espl-angular:module --name <ModuleName>
+```
+
 ## Getting To Know Yeoman
 
  * Yeoman has a heart of gold.
