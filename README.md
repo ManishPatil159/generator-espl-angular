@@ -19,14 +19,20 @@ yo espl-angular
 Generate a new module in your project:
 
 ```bash
-yo espl-angular:module --name <ModuleName>
+yo espl-angular:module --name ModuleName
 ```
 
-Generate a new module in your project:
+Generate a new component in your project:
 
 ```bash
-yo espl-angular:component --name <ComponentName>
-yo espl-angular:component --name <ComponentName> --dir <path>
+yo espl-angular:component --name ComponentName
+yo espl-angular:component --name ComponentName --dir path
+```
+Generate a new service in your project:
+
+```bash
+yo espl-angular:service --name ServiceName
+yo espl-angular:service --name ServiceName --dir path
 ```
 
 

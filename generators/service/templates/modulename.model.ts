@@ -1,5 +1,5 @@
 export interface <%- Title %> {
-  name: string;
+  name:string;
 };
 
 export const initialCounter: Array<<%- Title %>> = []
